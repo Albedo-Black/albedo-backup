@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set variable for directory that will contain the backups for debian.
-BACKUP_DIR=/media/albedo/BIG-BITCH/backup/debian
+BACKUP_DIR=/media/<insert your own path>/backup/debian
 
 # Evaluate the presence of the directory "$BACKUP_DIR" is referencing. If it exists, move to that directory; if it does
 # not exist, create the corresponding directories. Logic is kept simple, if the full directory doesn't exist, it

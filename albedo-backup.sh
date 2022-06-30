@@ -34,7 +34,7 @@ if [ -f $BACKUP_DIR/debian.backup.snap=FALSE || -f $BACKUP_DIR/full/*_debian.tar
 
 # Evaluate existence of a full backup file and the incremental snapshot data. If both exist, create an incremental
 # backup, then echo a completion statement to that effect.
-elif [ -f $BACKUP_DIR/debian.backup.snap=TRUE && $BACKUP_DIR/full/*_debian.tar.gz=TRUE ]; then
+elif [ -f $BACKUP_DIR/debian.backup.snap=TRUE && -f $BACKUP_DIR/full/*_debian.tar.gz=TRUE ]; then
     tar --create \
         --file="$BACKUP_DIR/incremental/$(date +%d%m%y)/$(date +%d%m%y%H%M%S)_debian.tar.gz" \
         --verbose \
